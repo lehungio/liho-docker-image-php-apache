@@ -13,7 +13,4 @@ RUN curl -o phpunit -L https://phar.phpunit.de/phpunit-5.7.phar \
     && chmod +x phpunit \
     && mv phpunit /usr/local/bin/
 
-# php-curl
-RUN apt-get install -y php5-curl
-
 EXPOSE 8000
