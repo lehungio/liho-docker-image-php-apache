@@ -1,0 +1,6 @@
+sudo: required
+services: docker
+script:
+  - docker build -t lehungio/php-apache .
+after_script:
+  - docker images
