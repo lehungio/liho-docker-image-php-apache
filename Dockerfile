@@ -1,4 +1,6 @@
-FROM php:5.6
+FROM php:5.6.32
+
+MAINTAINER Liho <me@lehungio.com>
 
 # init
 RUN apt-get update && apt-get install -y git \
