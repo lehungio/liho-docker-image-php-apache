@@ -1,4 +1,4 @@
-FROM php:5.6.32
+FROM php:5.4
 
 MAINTAINER Liho <me@lehungio.com>
 
