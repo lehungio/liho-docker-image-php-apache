@@ -1,14 +1,14 @@
 version: '3.3'
 
 services:
-  php:
-    container_name: liho-docker-image-php-apache
+  liho:
+    container_name: php-apache
     build:
       context: .
       dockerfile: Dockerfile
-    entrypoint: php -S 0.0.0.0:8000
     working_dir: /code
     ports:
+      - "80:80"
       - "8000:8000"
     volumes:
       - ./:/code
