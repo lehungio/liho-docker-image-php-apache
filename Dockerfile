@@ -14,25 +14,25 @@ RUN rpm -ivh https://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noa
 RUN yum update -y
 RUN yum install -y httpd
 RUN yum install --enablerepo=epel,remi-php56,remi -y \
-                              php php-devel php-intl \
-                              php-cli php-curl \
-                              php-gd \
-                              php-mbstring \
-                              php-mcrypt \
-                              php-mysqlnd \
-                              php-pdo \
-                              php-xml \
-                              php-xdebug \
-                              php-memcached \
-                              mysql-server \
-                              phpmyadmin \
-                              mod_ssl openssl \
-                              rsync
+  php php-devel php-intl \
+  php-cli php-curl \
+  php-gd \
+  php-mbstring \
+  php-mcrypt \
+  php-mysqlnd \
+  php-pdo \
+  php-xml \
+  php-xdebug \
+  php-memcached \
+  mysql-server \
+  phpmyadmin \
+  mod_ssl openssl \
+  rsync
 
 RUN sed -i -e "s|^;date.timezone =.*$|date.timezone = Asia/Tokyo|" /etc/php.ini
 
 # Default Docker Dev
-COPY conf/httpd.conf /etc/httpd/conf.d/virtual.conf
+COPY site.conf /etc/httpd/conf.d/site.conf
 # TODO: allow exclude cp !()
 RUN shopt -s extglob
 
