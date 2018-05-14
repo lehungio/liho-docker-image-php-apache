@@ -1,6 +1,6 @@
 sudo: required
 services: docker
 script:
-  - docker build -t lehungio/php-apache .
+  - docker build -t lehungio/php-apache:5.3 .
 after_script:
   - docker images
